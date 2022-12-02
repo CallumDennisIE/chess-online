@@ -1,0 +1,22 @@
+.chessboard {
+    display: grid;
+    justify-content: center;
+  
+    padding-top: 5%;
+  
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+  }
+  
+  .box {
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  
+  .black {
+    background-color: lightgrey;
+  }
