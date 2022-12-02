@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Checks to see if any square has been clicked
         square.addEventListener("click", function () {
-            alert(`Clicked - ${square.dataset.file}, ${square.dataset.rank}`)
+            checkSquare(square);
         });
     }
 });
@@ -63,3 +63,53 @@ function assignPieces(square) {
         }
     }
 };
+
+// Check which piece is selected and call the relevant function
+function checkSquare(square) {
+
+    // Get the data attribute 'piece' from the selected square
+    switch (square.dataset.piece) {
+        case "pawn":
+            pawnMoves(square);
+            break;
+        case "rook":
+            rookMoves(square);
+            break;
+        case "bishop":
+            bishopMoves(square);
+            break;
+        case "knight":
+            knightMoves(square);
+            break;
+        case "king":
+            kingMoves(square);
+            break;
+        case "queen":
+            queenMoves(square);
+            break;
+    }
+}
+
+function pawnMoves(pawn) {
+    alert('Pawn is clicked');
+}
+
+function rookMoves(rook) {
+    alert('Rook is clicked');
+}
+
+function bishopMoves(bishop) {
+    alert('Bishop is clicked');
+}
+
+function knightMoves(knight) {
+    alert('Knight is clicked');
+}
+
+function kingMoves(king) {
+    alert('King is clicked');
+}
+
+function queenMoves(queen) {
+    alert('Queen is clicked');
+}
