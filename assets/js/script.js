@@ -67,26 +67,30 @@ function assignPieces(square) {
 // Check which piece is selected and call the relevant function
 function checkSquare(square) {
 
-    // Get the data attribute 'piece' from the selected square
-    switch (square.dataset.piece) {
-        case "pawn":
-            pawnMoves(square);
-            break;
-        case "rook":
-            rookMoves(square);
-            break;
-        case "bishop":
-            bishopMoves(square);
-            break;
-        case "knight":
-            knightMoves(square);
-            break;
-        case "king":
-            kingMoves(square);
-            break;
-        case "queen":
-            queenMoves(square);
-            break;
+    // Check if current turn matches colour of selected piece
+    if (getCurrentTurn() === square.dataset.colour) {
+
+        // Get the data attribute 'piece' from the selected square
+        switch (square.dataset.piece) {
+            case "pawn":
+                pawnMoves(square);
+                break;
+            case "rook":
+                rookMoves(square);
+                break;
+            case "bishop":
+                bishopMoves(square);
+                break;
+            case "knight":
+                knightMoves(square);
+                break;
+            case "king":
+                kingMoves(square);
+                break;
+            case "queen":
+                queenMoves(square);
+                break;
+        }
     }
 }
 
@@ -112,4 +116,11 @@ function kingMoves(king) {
 
 function queenMoves(queen) {
     alert('Queen is clicked');
+}
+
+// Returns the current player turn from HTML DOM 
+function getCurrentTurn() {
+    turn = document.getElementById("player-turn").textContent.toLowerCase();
+
+    return (turn);
 }
