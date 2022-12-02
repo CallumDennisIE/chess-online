@@ -1,11 +1,5 @@
 # Chess Online
 
-
-![GitHub last commit](https://img.shields.io/github/last-commit/CallumDennisIE/mobile-physio?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/CallumDennisIE/mobile-physio?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/CallumDennisIE/mobile-physio?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/CallumDennisIE/mobile-physio?style=for-the-badge)
-
 ## Contents
 * [About](#about)
 * [User Experience](#user-experience)
@@ -63,9 +57,19 @@
 
 ## Technologies Used
 ### Languages Used
-
+- HTML5
+- CSS3
+- JavaScript
 
 ### Frameworks, Libraries & Programs Used
+- [Git](https://git-scm.com/):
+    - Git commands were used for version control.
+- [GitHub](https://github.com/):
+    - Project was hosted on GitHub and GitHub Pages hosted the live site.
+- [Gitpod](https://www.gitpod.io/):
+    - The project was developed using Gitpod development environment.
+- [CodePen](https://codepen.io/):
+    - Features were tested on CodePen, to test functions in isolation of the main project.
 
 
 [Back to top!](#chess-online)
