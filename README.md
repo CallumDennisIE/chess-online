@@ -1,5 +1,7 @@
 # Chess Online
 
+[View the live project here.](https://callumdennisie.github.io/chess-online/)
+
 ## Contents
 * [About](#about)
 * [User Experience](#user-experience)
