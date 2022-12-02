@@ -91,6 +91,9 @@ function checkSquare(square) {
                 queenMoves(square);
                 break;
         }
+
+        // Change turn after clicking on correct coloured piece
+        changeCurrentTurn();
     }
 }
 
@@ -123,4 +126,13 @@ function getCurrentTurn() {
     turn = document.getElementById("player-turn").textContent.toLowerCase();
 
     return (turn);
+}
+
+// Changes the current turn to the next player
+function changeCurrentTurn() {
+    if (getCurrentTurn() === "white") {
+        document.getElementById("player-turn").textContent = "Black";
+    } else {
+        document.getElementById("player-turn").textContent = "White";
+    }
 }
