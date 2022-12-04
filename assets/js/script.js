@@ -158,6 +158,7 @@ function changeCurrentTurn() {
     }
 }
 
+// Check the squares before they are highlighted
 function checkSquares(incrementFile, incrementRank, numberOfMoves, position, capture) {
     let file = position[0];
     let rank = Number(position[1]);
@@ -177,5 +178,29 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
         // Add values to array
         squares.push(newPosition);
     }
+
+    let validSquares = [];
+
+     // Checks to see if the square is valid
+     for (let square of squares) {
+        if (checkValidPosition(square[0], square[1])) {
+            let validPosition = [square[0], square[1]]
+            validSquares.push(validPosition);
+        }
+    }
    
+}
+
+// Check if a square is in a valid position
+function checkValidPosition(file, rank) {
+    let validFiles = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    let validRanks = ['1', '2', '3', '4', '5', '6', '7', '8'];
+    let isValid = false;
+
+    // Checks to see if the position is within the bounds of the board
+    if (validFiles.includes(file) && validRanks.includes(String(rank))) {
+        isValid = true;
+    }
+
+    return isValid;
 }
