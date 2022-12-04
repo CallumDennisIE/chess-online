@@ -157,3 +157,25 @@ function changeCurrentTurn() {
         document.getElementById("player-turn").textContent = "White";
     }
 }
+
+function checkSquares(incrementFile, incrementRank, numberOfMoves, position, capture) {
+    let file = position[0];
+    let rank = Number(position[1]);
+    let newPosition = [];
+    let squares = [];
+
+    // Repeat for the number of moves specified
+    for (let moves = 0; moves < numberOfMoves; moves++) {
+
+        // Increase or decrease position in alphabet of file value
+        file = String.fromCharCode(file.charCodeAt(0) + incrementFile);
+
+        // Increase or decrease rank value
+        rank = rank + incrementRank;
+
+        newPosition = [file, rank];
+        // Add values to array
+        squares.push(newPosition);
+    }
+   
+}
