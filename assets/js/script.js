@@ -99,6 +99,27 @@ function checkSquare(square) {
 
 function pawnMoves(pawn) {
     alert('Pawn is clicked');
+
+    // Sets position variable based on current square occupied
+    let position = [pawn.dataset.file, pawn.dataset.rank];
+    let moves;
+    let direction;
+
+    // Set the ammount of squares moved, based on if the piece has moved previously
+    if (pawn.hasAttribute("data-has-moved")) {
+        moves = 1;
+    } else {
+        moves = 2;
+    }
+
+    // Set direction of movement based on current player turn
+    if (getCurrentTurn() === "white") {
+        // Move forward by number of moves
+        direction = checkSquares(0, 1, moves, position, false);
+    } else {
+        // Move forward by number of moves
+        direction = checkSquares(0, -1, moves, position, false);
+    }
 }
 
 function rookMoves(rook) {
