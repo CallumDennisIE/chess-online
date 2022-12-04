@@ -158,6 +158,20 @@ function changeCurrentTurn() {
     }
 }
 
+// Get the HTML object from the file and rank of the squares
+function getSquare(file, rank) {
+    let newSquare;
+
+    // Iterates through all squares on the board and finds the one that matches the position
+    let squares = document.getElementsByClassName("box");
+    for (let square of squares) {
+        if (square.dataset.file === file && square.dataset.rank === String(rank)) {
+            newSquare = square;
+        }
+    }
+    return (newSquare)
+}
+
 // Check the squares before they are highlighted
 function checkSquares(incrementFile, incrementRank, numberOfMoves, position, capture) {
     let file = position[0];
