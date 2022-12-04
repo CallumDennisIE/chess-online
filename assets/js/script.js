@@ -195,14 +195,36 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
     let validSquares = [];
 
-     // Checks to see if the square is valid
-     for (let square of squares) {
+    // Checks to see if the square is valid
+    for (let square of squares) {
         if (checkValidPosition(square[0], square[1])) {
             let validPosition = [square[0], square[1]]
             validSquares.push(validPosition);
         }
     }
-   
+
+    let hitOccupied = false;
+    let emptySquares = [];
+
+    for (let validSquare of validSquares) {
+        if (!hitOccupied) {
+            if (checkSquareOccupied(validSquare[0], validSquare[1])) {
+                hitOccupied = true;
+
+                // If move is to caputre a piece then call capture function
+                if (capture) {
+                    let squareToCapture = getSquare(validSquare[0], validSquare[1]);
+                    if (squareToCapture.dataset.colour !== getCurrentTurn()) {
+                        captureSquare(squareToCapture);
+                        emptySquares.push(validSquare);
+                    }
+                }
+            } else {
+                emptySquares.push(validSquare);
+            }
+        }
+    }
+
 }
 
 // Check if a square is in a valid position
@@ -217,4 +239,17 @@ function checkValidPosition(file, rank) {
     }
 
     return isValid;
+}
+
+// Check to see if the specific square is occupied
+function checkSquareOccupied(file, rank) {
+    let isOccupied = false;
+    let square = getSquare(file, rank);
+
+    // Checks to see if the square already has the HTML attribute for a piece
+    if (square.hasAttribute('data-piece')) {
+        isOccupied = true;
+    }
+
+    return isOccupied;
 }
