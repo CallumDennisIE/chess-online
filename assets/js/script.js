@@ -66,35 +66,46 @@ function assignPieces(square) {
 
 // Check which piece is selected and call the relevant function
 function checkSquare(square) {
+    if (square.textContent === "X") {
+        // if highlighted then moveToSquare()
 
-    // Check if current turn matches colour of selected piece
-    if (getCurrentTurn() === square.dataset.colour) {
+        let position = [square.dataset.file, square.dataset.rank]
+        let mover = [square.getAttribute('data-mover-file'), square.getAttribute('data-mover-rank')]
 
-        // Get the data attribute 'piece' from the selected square
-        switch (square.dataset.piece) {
-            case "pawn":
-                pawnMoves(square);
-                break;
-            case "rook":
-                rookMoves(square);
-                break;
-            case "bishop":
-                bishopMoves(square);
-                break;
-            case "knight":
-                knightMoves(square);
-                break;
-            case "king":
-                kingMoves(square);
-                break;
-            case "queen":
-                queenMoves(square);
-                break;
+        moveToSquare(position, mover);
+
+    } else {
+
+        // If a non highlighted square is clicked, reset the highlighted squares
+        resetHighlightedSquares();
+
+        // Check if current turn matches colour of selected piece
+        if (getCurrentTurn() === square.dataset.colour) {
+
+            // Get the data attribute 'piece' from the selected square
+            switch (square.dataset.piece) {
+                case "pawn":
+                    pawnMoves(square);
+                    break;
+                case "rook":
+                    rookMoves(square);
+                    break;
+                case "bishop":
+                    bishopMoves(square);
+                    break;
+                case "knight":
+                    knightMoves(square);
+                    break;
+                case "king":
+                    kingMoves(square);
+                    break;
+                case "queen":
+                    queenMoves(square);
+                    break;
+            }
         }
-
-        // Change turn after clicking on correct coloured piece
-        changeCurrentTurn();
     }
+
 }
 
 function pawnMoves(pawn) {
@@ -123,7 +134,7 @@ function pawnMoves(pawn) {
 
     for (let value of direction) {
         highlightSquare(value, position);
-    } 
+    }
 }
 
 function rookMoves(rook) {
@@ -183,6 +194,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     let newPosition = [];
     let squares = [];
 
+
     // Repeat for the number of moves specified
     for (let moves = 0; moves < numberOfMoves; moves++) {
 
@@ -230,7 +242,6 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     }
 
     return emptySquares;
-
 }
 
 // Check if a square is in a valid position
@@ -280,4 +291,30 @@ function resetHighlightedSquares() {
             square.removeAttribute('data-mover-rank');
         }
     }
+}
+
+// Move over data attributes to the new square
+function moveToSquare(newPosition, oldPosition) {
+
+    // Reset highlighted squares before moving
+    resetHighlightedSquares();
+
+    let newSquare = getSquare(newPosition[0], newPosition[1]);
+    let oldSquare = getSquare(oldPosition[0], oldPosition[1]);
+
+    newSquare.textContent = oldSquare.textContent;
+    newSquare.dataset.colour = oldSquare.dataset.colour;
+    newSquare.dataset.piece = oldSquare.dataset.piece;
+
+    newSquare.setAttribute('data-has-moved', '');
+    oldSquare.removeAttribute('data-has-moved');
+
+    oldSquare.textContent = null;
+    oldSquare.removeAttribute('data-colour');
+    oldSquare.removeAttribute('data-piece');
+    oldSquare.removeAttribute('data-mover-file');
+    oldSquare.removeAttribute('data-mover-rank');
+
+    // Change the current players turn
+    changeCurrentTurn();
 }
