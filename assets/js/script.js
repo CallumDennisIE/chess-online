@@ -269,3 +269,15 @@ function highlightSquare(newPosition, oldPosition) {
     square.setAttribute('data-mover-file', oldPosition[0]);
     square.setAttribute('data-mover-rank', oldPosition[1]);
 }
+
+// Resets all squares that are highlighted
+function resetHighlightedSquares() {
+    let squares = document.getElementsByClassName("box");
+    for (let square of squares) {
+        if (square.textContent === "X") {
+            square.textContent = null;
+            square.removeAttribute('data-mover-file');
+            square.removeAttribute('data-mover-rank');
+        }
+    }
+}
