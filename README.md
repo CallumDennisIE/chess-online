@@ -50,6 +50,39 @@
 
 ### Wireframes
 
+Chessboard at Game Start - Wireframes:
+<details>
+<summary>Click for Image: Chessboard at Game Start - Mobile Wireframe</summary>
+
+![About Page Mobile Wireframe](/assets/images/README/wireframe-start-mobile.png)
+
+</details>
+
+<details>
+<summary>Click for Image: Chessboard at Game Start - Desktop Wireframe</summary>
+
+![About Page Mobile Wireframe](/assets/images/README/wireframe-start-desktop.png)
+
+</details>
+
+***
+
+Chessboard when Capturing a Piece - Wireframes:
+<details>
+<summary>Click for Image: Chessboard when Capturing a Piece - Mobile Wireframe</summary>
+
+![About Page Mobile Wireframe](/assets/images/README/wireframe-capture-mobile.png)
+
+</details>
+
+<details>
+<summary>Click for Image: Chessboard when Capturing a Piece - Desktop Wireframe</summary>
+
+![About Page Mobile Wireframe](/assets/images/README/wireframe-capture-desktop.png)
+
+</details>
+
+***
 
 [Back to top!](#chess-online)
 
