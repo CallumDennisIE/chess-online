@@ -120,6 +120,10 @@ function pawnMoves(pawn) {
         // Move forward by number of moves
         direction = checkSquares(0, -1, moves, position, false);
     }
+
+    for (let value of direction) {
+        highlightSquare(value, position);
+    } 
 }
 
 function rookMoves(rook) {
@@ -225,6 +229,8 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
         }
     }
 
+    return emptySquares;
+
 }
 
 // Check if a square is in a valid position
@@ -252,4 +258,14 @@ function checkSquareOccupied(file, rank) {
     }
 
     return isOccupied;
+}
+
+function highlightSquare(newPosition, oldPosition) {
+    square = getSquare(newPosition[0], newPosition[1]);
+    // Highlights the selected square 
+    square.textContent = "X";
+
+    // Attaches an attribute that includes the piece that wants to move to the highlighted square
+    square.setAttribute('data-mover-file', oldPosition[0]);
+    square.setAttribute('data-mover-rank', oldPosition[1]);
 }
