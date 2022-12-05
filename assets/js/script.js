@@ -260,8 +260,30 @@ function kingMoves(king){
     }
 }
 
-function queenMoves(queen) {
-    alert('Queen is clicked');
+function queenMoves(queen){
+    let moves = 8;
+    let position = [queen.dataset.file, queen.dataset.rank];
+    let destinations = [];
+
+    // Check each cardinal direction
+    let forwards = checkSquares(0, 1, moves, position, true);
+    let backwards = checkSquares(0, -1, moves, position, true);
+    let left = checkSquares(1, 0, moves, position, true);
+    let right = checkSquares(-1, 0, moves, position, true);
+
+    // Check each diagonal direction
+    let rightForwards = checkSquares(1, 1, moves, position, true);
+    let leftForwards = checkSquares(1, -1, moves, position, true);
+    let leftBackwards = checkSquares(-1, -1, moves, position, true);
+    let rightBackwards =checkSquares(-1, 1, moves, position, true);
+
+    destinations = [forwards, backwards, left, right, leftForwards, rightForwards, leftBackwards, rightBackwards];
+
+    for (let direction of destinations) {
+        for (let value of direction) {
+            highlightSquare(value, position);
+        }
+    }
 }
 
 // Returns the current player turn from HTML DOM 
