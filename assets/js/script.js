@@ -109,13 +109,10 @@ function checkSquare(square) {
 }
 
 function pawnMoves(pawn) {
-    alert('Pawn is clicked');
-
-    // Sets position variable based on current square occupied
-    let position = [pawn.dataset.file, pawn.dataset.rank];
     let moves;
-    let direction;
-
+    let position = [pawn.dataset.file, pawn.dataset.rank];
+    let destinations = [];
+    
     // Set the ammount of squares moved, based on if the piece has moved previously
     if (pawn.hasAttribute("data-has-moved")) {
         moves = 1;
@@ -126,14 +123,42 @@ function pawnMoves(pawn) {
     // Set direction of movement based on current player turn
     if (getCurrentTurn() === "white") {
         // Move forward by number of moves
-        direction = checkSquares(0, 1, moves, position, false);
+        let forwards = checkSquares(0, 1, moves, position, false);
+
+        // Capture right/left diagonal
+        let rightForwards = checkSquares(1, 1, 1, position, true);
+        let leftForwards = checkSquares(-1, 1, 1, position, true);
+        destinations = [forwards, rightForwards, leftForwards];
     } else {
         // Move forward by number of moves
-        direction = checkSquares(0, -1, moves, position, false);
+        let backwards = checkSquares(0, -1, moves, position, false);
+
+        // Capture right/left diagonal
+        let rightBackwards = checkSquares(1, -1, 1, position, true);
+        let leftBackwards = checkSquares(-1, -1, 1, position, true);
+        destinations = [backwards, rightBackwards, leftBackwards];
     }
 
-    for (let value of direction) {
-        highlightSquare(value, position);
+    // Highlights all squares that are added to it
+    for (let direction of destinations) {
+        if (direction === destinations[0]) {
+            for (let value of direction) {
+                highlightSquare(value, position);
+            } 
+        } else {
+            
+            for (let value of direction) {
+                let target = getSquare(value[0], value[1]);
+
+                // If the square is highlighted in red
+                if (target.classList.contains('red')) {
+
+                    // Add the X mark on the square
+                    let targetPosition = [value[0], value[1]]
+                    highlightSquare(targetPosition, position)
+                }
+            } 
+        }
     }
 }
 
@@ -194,7 +219,6 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     let newPosition = [];
     let squares = [];
 
-
     // Repeat for the number of moves specified
     for (let moves = 0; moves < numberOfMoves; moves++) {
 
@@ -206,10 +230,12 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
         newPosition = [file, rank];
         // Add values to array
-        squares.push(newPosition);
+        squares.push(newPosition)
     }
-
+    // Validate Squares
     let validSquares = [];
+    let emptySquares = [];
+   
 
     // Checks to see if the square is valid
     for (let square of squares) {
@@ -219,8 +245,8 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
         }
     }
 
+    // Checks to see if the square is currently occupied
     let hitOccupied = false;
-    let emptySquares = [];
 
     for (let validSquare of validSquares) {
         if (!hitOccupied) {
@@ -229,7 +255,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
                 // If move is to caputre a piece then call capture function
                 if (capture) {
-                    let squareToCapture = getSquare(validSquare[0], validSquare[1]);
+                    let squareToCapture =  getSquare(validSquare[0], validSquare[1]);
                     if (squareToCapture.dataset.colour !== getCurrentTurn()) {
                         captureSquare(squareToCapture);
                         emptySquares.push(validSquare);
@@ -256,6 +282,13 @@ function checkValidPosition(file, rank) {
     }
 
     return isValid;
+}
+
+function captureSquare(square) {
+    // Change the square colour to be red
+    square.classList.add('red');
+    square.setAttribute('data-capture-piece', square.dataset.piece);
+    square.setAttribute('data-capture-colour', square.dataset.colour);
 }
 
 // Check to see if the specific square is occupied
