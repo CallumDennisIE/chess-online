@@ -318,12 +318,27 @@ function highlightSquare(newPosition, oldPosition) {
 function resetHighlightedSquares() {
     let squares = document.getElementsByClassName("box");
     for (let square of squares) {
+        if (square.hasAttribute('data-capture-piece')) {
+            resetCapturePiece(square);
+        }
         if (square.textContent === "X") {
             square.textContent = null;
             square.removeAttribute('data-mover-file');
             square.removeAttribute('data-mover-rank');
         }
     }
+}
+
+function resetCapturePiece(square) {
+    square.setAttribute('data-piece', square.getAttribute('data-capture-piece'));
+    square.setAttribute('data-colour', square.getAttribute('data-capture-colour'));
+
+    assignPieces(square);
+    square.removeAttribute('data-capture-piece');
+    square.removeAttribute('data-capture-colour');
+
+    // Removes the red square colour
+    square.classList.remove('red');
 }
 
 // Move over data attributes to the new square
