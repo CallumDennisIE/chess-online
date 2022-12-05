@@ -219,8 +219,45 @@ function knightMoves(knight) {
     alert('Knight is clicked');
 }
 
-function kingMoves(king) {
-    alert('King is clicked');
+function kingMoves(king){
+    let moves = 1;
+    let position = [king.dataset.file, king.dataset.rank];
+    let destinations = [];
+
+    // Check each cardinal direction
+    // Forwards
+    let forwards = checkSquares(0, 1, moves, position, true);
+
+    // Backwards
+    let backwards = checkSquares(0, -1, moves, position, true);
+
+    // Right
+    let right = checkSquares(1, 0, moves, position, true);
+
+    // Left
+    let left = checkSquares(-1, 0, moves, position, true);
+
+    // Check each diagonal direction
+
+    // Check diagonal right and forward
+    let rightForwards = checkSquares(1, 1, moves, position, true);
+
+    // Check diagonal left and forward
+    let leftForwards = checkSquares(-1, 1, moves, position, true);
+
+    // Check diagonal right and backwards
+    let rightBackwards = checkSquares(1, -1, moves, position, true);
+
+    // Check diagonal left and backwards
+    let leftBackwards = checkSquares(-1, -1, moves, position, true);
+
+    destinations = [forwards, backwards, left, right, leftForwards, rightForwards, leftBackwards, rightBackwards];
+
+    for (let direction of destinations) {
+        for (let value of direction) {
+            highlightSquare(value, position);
+        }
+    }
 }
 
 function queenMoves(queen) {
