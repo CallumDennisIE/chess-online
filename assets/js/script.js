@@ -190,7 +190,29 @@ function rookMoves(rook) {
 
 
 function bishopMoves(bishop) {
-    alert('Bishop is clicked');
+    let moves = 8;
+    let position = [bishop.dataset.file, bishop.dataset.rank];
+    let destinations = [];
+
+    // Diagonal left and forwards
+    let leftForwards = checkSquares(-1, 1, moves, position, true);
+    
+    // Diagonal right and forwards
+    let rightForwards = checkSquares(1, 1, moves, position, true);
+    
+    // Diagonal left and backwards
+    let leftBackwards = checkSquares(-1, -1, moves, position, true);
+    
+    // Diagonal right and backwards
+    let rightBackwards = checkSquares(1, -1, moves, position, true);
+
+    destinations = [leftForwards, rightForwards, leftBackwards, rightBackwards];
+
+    for (let direction of destinations) {
+        for (let value of direction) {
+            highlightSquare(value, position);
+        }
+    }
 }
 
 function knightMoves(knight) {
