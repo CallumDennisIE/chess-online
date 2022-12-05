@@ -216,7 +216,37 @@ function bishopMoves(bishop) {
 }
 
 function knightMoves(knight) {
-    alert('Knight is clicked');
+    let moves = 1;
+    let position = [knight.dataset.file, knight.dataset.rank];
+    let destinations = [];
+
+    // Right 1, Forward 2
+    let rightOneForwardTwo = checkSquares(1, 2, moves, position, true);
+    // Right 2, Forward 1
+    let rightTwoForwardOne = checkSquares(2, 1, moves, position, true);
+
+    // Left 1, Forward 2
+    let leftOneForwardTwo = checkSquares(-1, 2, moves, position, true);
+    // Left 2, Forward 1
+    let leftTwoForwardOnce = checkSquares(-2, 1, moves, position, true);
+
+    // Right 1, Backward 2
+    let rightOneBackwardTwo = checkSquares(1, -2, moves, position, true);
+    // Right 2, Backward 1
+    let rightTwoBackwardOne = checkSquares(2, -1, moves, position, true);
+
+    // Left 1, Backward 2
+    let leftOneBackwardTwo = checkSquares(-1, -2, moves, position, true);
+    // Left 2, Backward 1
+    let leftTwoBackwardOne = checkSquares(-2, -1, moves, position, true);
+
+    destinations = [rightOneForwardTwo, rightTwoForwardOne, leftOneForwardTwo, leftTwoForwardOnce, rightOneBackwardTwo, rightTwoBackwardOne, leftOneBackwardTwo, leftTwoBackwardOne];
+
+    for (let direction of destinations) {
+        for (let value of direction) {
+            highlightSquare(value, position);
+        }
+    }
 }
 
 function kingMoves(king){
