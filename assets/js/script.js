@@ -112,7 +112,7 @@ function pawnMoves(pawn) {
     let moves;
     let position = [pawn.dataset.file, pawn.dataset.rank];
     let destinations = [];
-    
+
     // Set the ammount of squares moved, based on if the piece has moved previously
     if (pawn.hasAttribute("data-has-moved")) {
         moves = 1;
@@ -144,9 +144,9 @@ function pawnMoves(pawn) {
         if (direction === destinations[0]) {
             for (let value of direction) {
                 highlightSquare(value, position);
-            } 
+            }
         } else {
-            
+
             for (let value of direction) {
                 let target = getSquare(value[0], value[1]);
 
@@ -157,14 +157,37 @@ function pawnMoves(pawn) {
                     let targetPosition = [value[0], value[1]]
                     highlightSquare(targetPosition, position)
                 }
-            } 
+            }
         }
     }
 }
 
 function rookMoves(rook) {
-    alert('Rook is clicked');
+    let moves = 8;
+    let position = [rook.dataset.file, rook.dataset.rank];
+    let destinations = [];
+
+    // Check 8 squares forwards
+    let forwards = checkSquares(0, 1, moves, position, true);
+
+    // Check 8 squares backwards
+    let backwards = checkSquares(0, -1, moves, position, true);
+
+    // Check 8 squares left
+    let left = checkSquares(-1, 0, moves, position, true);
+
+    // Check 8 squares right
+    let right = checkSquares(1, 0, moves, position, true);
+
+    destinations = [forwards, backwards, left, right];
+
+    for (let direction of destinations) {
+        for (let value of direction) {
+            highlightSquare(value, position);
+        }
+    }
 }
+
 
 function bishopMoves(bishop) {
     alert('Bishop is clicked');
@@ -235,7 +258,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     // Validate Squares
     let validSquares = [];
     let emptySquares = [];
-   
+
 
     // Checks to see if the square is valid
     for (let square of squares) {
@@ -255,7 +278,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
                 // If move is to caputre a piece then call capture function
                 if (capture) {
-                    let squareToCapture =  getSquare(validSquare[0], validSquare[1]);
+                    let squareToCapture = getSquare(validSquare[0], validSquare[1]);
                     if (squareToCapture.dataset.colour !== getCurrentTurn()) {
                         captureSquare(squareToCapture);
                         emptySquares.push(validSquare);
