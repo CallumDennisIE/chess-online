@@ -175,6 +175,11 @@ function pawnMoves(pawn) {
     }
 }
 
+/**
+ * Controls the movement of the rook piece.  
+ * Moves/Captures: 8 squares forwards, backwards, left and right.
+ * Parameter - HTML Object (rook)
+ */
 function rookMoves(rook) {
     let moves = 8;
     let position = [rook.dataset.file, rook.dataset.rank];
