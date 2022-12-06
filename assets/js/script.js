@@ -376,7 +376,7 @@ function changeCurrentTurn() {
 
 /**
  * Get the HTML object (square) from the position parameters.
- * Parameters - file(x-axis of piece on the board), rank (y-axis of piece on the board).
+ * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
  */
 function getSquare(file, rank) {
     let newSquare;
@@ -470,7 +470,10 @@ function captureSquare(square) {
     square.setAttribute('data-capture-colour', square.dataset.colour);
 }
 
-// Check to see if the specific square is occupied
+/**
+ * Checks to see if the provided square is occupied by another piece, returns boolean.
+ * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
+ */
 function checkSquareOccupied(file, rank) {
     let isOccupied = false;
     let square = getSquare(file, rank);
