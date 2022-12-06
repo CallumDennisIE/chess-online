@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Assigns the correct pieces to the squares based on the data attributes
+ * Assigns the correct pieces to the squares based on the data attributes.
  * Takes the HTML object (square) that will have the piece assigned on.
  */
-// 
 function assignPieces(square) {
     if (square.dataset.colour === "white") {
         switch (square.dataset.piece) {
@@ -68,7 +67,10 @@ function assignPieces(square) {
     }
 };
 
-// Check which piece is selected and call the relevant function
+/**
+ * Check which piece is selected and calls the relevant movement function.
+ * Parameter - HTML Object (square)
+ */
 function checkSquare(square) {
     if (square.textContent === "X") {
         // if highlighted then moveToSquare()
