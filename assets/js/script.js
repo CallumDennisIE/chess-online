@@ -449,7 +449,10 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     return emptySquares;
 }
 
-// Check if a square is in a valid position
+/**
+ * Checks the file and rank of a piece to see if they are within the bounds of the chessboard.
+ * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
+ */
 function checkValidPosition(file, rank) {
     let validFiles = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     let validRanks = ['1', '2', '3', '4', '5', '6', '7', '8'];
