@@ -483,6 +483,12 @@ function checkSquareOccupied(file, rank) {
     return isOccupied;
 }
 
+/**
+ * Highlights the provided square, to allow the player to know where they can move to.
+ * Also stores the position of the piece that can move to the highlighted square.
+ * Parameters - newPosition (file and rank of destination square), 
+ * oldPosition (file and rank of piece that can move to the highlighted square)
+ */
 function highlightSquare(newPosition, oldPosition) {
     square = getSquare(newPosition[0], newPosition[1]);
     // Highlights the selected square 
