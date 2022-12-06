@@ -520,7 +520,10 @@ function resetCapturePiece(square) {
     square.classList.remove('red');
 }
 
-// Move over data attributes to the new square
+/**
+ * Moves the data attributes and the chess piece from an old square to a new one.
+ * Parameters - newPosition (file and rank of destination square), oldPosition (file and rank of source square)
+ */
 function moveToSquare(newPosition, oldPosition) {
 
     // Reset highlighted squares before moving
