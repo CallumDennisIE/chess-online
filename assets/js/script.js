@@ -508,6 +508,10 @@ function resetHighlightedSquares() {
     }
 }
 
+/**
+ * Resets the attributes, content and class of a highlighted capture piece.
+ * Parameters - square (the HTML object) of a square that contains a highlighted capture piece.
+ */
 function resetCapturePiece(square) {
     square.setAttribute('data-piece', square.getAttribute('data-capture-piece'));
     square.setAttribute('data-colour', square.getAttribute('data-capture-colour'));
