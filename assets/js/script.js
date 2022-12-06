@@ -17,7 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Assigns the correct pieces to the squares based on the data attributes
+/**
+ * Assigns the correct pieces to the squares based on the data attributes
+ * Takes the HTML object (square) that will have the piece assigned on.
+ */
+// 
 function assignPieces(square) {
     if (square.dataset.colour === "white") {
         switch (square.dataset.piece) {
