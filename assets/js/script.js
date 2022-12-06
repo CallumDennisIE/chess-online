@@ -209,7 +209,7 @@ function rookMoves(rook) {
 /**
  * Controls the movement of the bishop piece.  
  * Moves/Captures: 8 squares diagonally in each direction.
- * Parameter - HTML Object (rook)
+ * Parameter - HTML Object (bishop)
  */
 function bishopMoves(bishop) {
     let moves = 8;
@@ -237,6 +237,12 @@ function bishopMoves(bishop) {
     }
 }
 
+/**
+ * Controls the movement of the knight piece.  
+ * Moves: 2 squares left/right + 1 square forward / 2 squares forward + 1 square left/right.
+ * Capture: Only captures sqiares it lands on.
+ * Parameter - HTML Object (knight)
+ */
 function knightMoves(knight) {
     let moves = 1;
     let position = [knight.dataset.file, knight.dataset.rank];
