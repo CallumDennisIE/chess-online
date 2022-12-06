@@ -277,6 +277,11 @@ function knightMoves(knight) {
     }
 }
 
+/**
+ * Controls the movement of the king piece.  
+ * Moves/Captures: 1 square in every direction.
+ * Parameter - HTML Object (king)
+ */
 function kingMoves(king){
     let moves = 1;
     let position = [king.dataset.file, king.dataset.rank];
