@@ -493,7 +493,11 @@ function highlightSquare(newPosition, oldPosition) {
     square.setAttribute('data-mover-rank', oldPosition[1]);
 }
 
-// Resets all squares that are highlighted
+/**
+ * Iterates through all squares and resets all squares that are highlighted.
+ * Resets square by removing the 'X' and relevant data attributes.
+ * If a square contains a piece that was highlighted for capture, then the resetCapturePiece() function is called.
+ */
 function resetHighlightedSquares() {
     let squares = document.getElementsByClassName("box");
     for (let square of squares) {
