@@ -391,7 +391,13 @@ function getSquare(file, rank) {
     return (newSquare)
 }
 
-// Check the squares before they are highlighted
+/**
+ * Checks through the movement of a piece and performs validation on each movement position.
+ * Parameters - incrementFile (the number that the file position should be incremented each move), 
+ * incrementRank(the number that the rank position should be incremented each move), 
+ * numberOfMoves(the number moves a piece makes), position(the original position of the piece), 
+ * capture (A boolean for if the piece can capture during this movement)
+ */
 function checkSquares(incrementFile, incrementRank, numberOfMoves, position, capture) {
     let file = position[0];
     let rank = Number(position[1]);
