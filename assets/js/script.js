@@ -117,6 +117,8 @@ function checkSquare(square) {
 /**
  * Controls the movement of the pawn piece. Checks to see if pawn has moved and assigns movement distance, 
  * also checks to see if capture is possible on diagonals.
+ * Moves: 1 or 2 squares forwards.
+ * Captures: 1 square diagonalally left and right.
  * Parameter - HTML Object (pawn)
  */
 function pawnMoves(pawn) {
