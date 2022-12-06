@@ -363,7 +363,6 @@ function getCurrentTurn() {
     return (turn);
 }
 
-// 
 /**
  * Changes the current player turn to the next player, by editing the DOM.
  */
@@ -375,7 +374,10 @@ function changeCurrentTurn() {
     }
 }
 
-// Get the HTML object from the file and rank of the squares
+/**
+ * Get the HTML object (square) from the position parameters.
+ * Parameters - file(x-axis of piece on the board), rank (y-axis of piece on the board).
+ */
 function getSquare(file, rank) {
     let newSquare;
 
