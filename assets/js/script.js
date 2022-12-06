@@ -354,7 +354,9 @@ function queenMoves(queen){
     }
 }
 
-// Returns the current player turn from HTML DOM 
+/**
+ * Gets the current player turn from the DOM and returns it.
+ */
 function getCurrentTurn() {
     turn = document.getElementById("player-turn").textContent.toLowerCase();
 
