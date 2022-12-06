@@ -355,7 +355,7 @@ function queenMoves(queen){
 }
 
 /**
- * Gets the current player turn from the DOM and returns it.
+ * Gets the current player turn from the DOM and returns.
  */
 function getCurrentTurn() {
     turn = document.getElementById("player-turn").textContent.toLowerCase();
@@ -363,7 +363,10 @@ function getCurrentTurn() {
     return (turn);
 }
 
-// Changes the current turn to the next player
+// 
+/**
+ * Changes the current player turn to the next player, by editing the DOM.
+ */
 function changeCurrentTurn() {
     if (getCurrentTurn() === "white") {
         document.getElementById("player-turn").textContent = "Black";
