@@ -323,6 +323,11 @@ function kingMoves(king){
     }
 }
 
+/**
+ * Controls the movement of the queen piece.  
+ * Moves/Captures: 8 squares in every direction.
+ * Parameter - HTML Object (queen)
+ */
 function queenMoves(queen){
     let moves = 8;
     let position = [queen.dataset.file, queen.dataset.rank];
