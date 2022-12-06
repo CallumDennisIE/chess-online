@@ -114,6 +114,11 @@ function checkSquare(square) {
 
 }
 
+/**
+ * Controls the movement of the pawn piece. Checks to see if pawn has moved and assigns movement distance, 
+ * also checks to see if capture is possible on diagonals.
+ * Parameter - HTML Object (pawn)
+ */
 function pawnMoves(pawn) {
     let moves;
     let position = [pawn.dataset.file, pawn.dataset.rank];
