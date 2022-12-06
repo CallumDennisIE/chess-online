@@ -463,6 +463,11 @@ function checkValidPosition(file, rank) {
     return isValid;
 }
 
+/**
+ * Adds a class to the square to change the square to red, signalling that a piece can be captured.
+ * Stores the piece and colour of the piece that will be captured, so that they can be reset if needed.
+ * Parameter - HTML Object (square), the square of the piece that will be captured.
+ */
 function captureSquare(square) {
     // Change the square colour to be red
     square.classList.add('red');
