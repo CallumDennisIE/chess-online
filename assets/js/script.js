@@ -1,6 +1,17 @@
 // Checks to see if all of the DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Refresh the page when the refresh icon is clicked
+    let refresh = document.getElementsByClassName("fa-arrows-rotate");
+    for (let button of refresh) {
+
+        button.addEventListener("click", function () {
+            location.reload();
+        });
+    }
+    
+
+
     // Gets all squares on the board
     let squares = document.getElementsByClassName("box");
 
