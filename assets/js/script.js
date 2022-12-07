@@ -78,6 +78,13 @@ function checkSquare(square) {
         let position = [square.dataset.file, square.dataset.rank]
         let mover = [square.getAttribute('data-mover-file'), square.getAttribute('data-mover-rank')]
 
+        // If the square being moved to, contains a piece to be captured
+        if (square.classList.contains('red')) {
+
+            // Get the point value for that square
+            alert(getPoints(square.dataset.piece));
+        }
+
         moveToSquare(position, mover);
 
     } else {
@@ -578,4 +585,21 @@ function moveToSquare(newPosition, oldPosition) {
 
     // Change the current players turn
     changeCurrentTurn();
+}
+
+/**
+ * Returns the point value of each piece that is provided to it.
+ * Parameter - piece (String - the name of a chess piece).
+ */
+function getPoints(piece) {
+    const points = new Map([
+        ["pawn", 1],
+        ["bishop", 3],
+        ["knight", 3],
+        ["rook", 5],
+        ["queen", 9],
+        ["king", 15]
+      ]);
+
+      return (points.get(piece));
 }
