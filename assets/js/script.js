@@ -83,6 +83,9 @@ function checkSquare(square) {
 
             // Get the point value for that square
             alert(getPoints(square.dataset.piece));
+
+            // Gets the current score of the player whos currently playing
+            alert(getCurrentScore(getCurrentTurn()));
         }
 
         moveToSquare(position, mover);
@@ -602,4 +605,14 @@ function getPoints(piece) {
       ]);
 
       return (points.get(piece));
+}
+
+/**
+ * Gets the player score of the provided player.
+ * Parameter - player (lowercase string of the player that you want to check the score of).
+ */
+ function getCurrentScore(player) {
+    score = Number(document.getElementById(`points-${player}`).textContent);
+
+    return (score);
 }
