@@ -81,11 +81,9 @@ function checkSquare(square) {
         // If the square being moved to, contains a piece to be captured
         if (square.classList.contains('red')) {
 
-            // Get the point value for that square
-            alert(getPoints(square.dataset.piece));
+            // Changes the current score by getting the passing the current player and (the current score + the point value of the captured piece)
+            changeCurrentScore(getCurrentTurn(), getCurrentScore(getCurrentTurn()) + getPoints(square.dataset.piece));
 
-            // Gets the current score of the player whos currently playing
-            alert(getCurrentScore(getCurrentTurn()));
         }
 
         moveToSquare(position, mover);
@@ -615,4 +613,13 @@ function getPoints(piece) {
     score = Number(document.getElementById(`points-${player}`).textContent);
 
     return (score);
+}
+
+/**
+ * Edits the HTML of the provided player's points, and assigns a new score.
+ * Parameters - player (lowercase string of the player that you want to edit the score of), 
+ * newScore (the value to replace the original score)
+ */
+ function changeCurrentScore(player, newScore) {
+    document.getElementById(`points-${player}`).textContent = newScore;
 }
