@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * Assigns the correct pieces to the squares based on the data attributes.
- * Takes the HTML object (square) that will have the piece assigned on.
+ * @param square The HTML object for a square on the chessboard that will have pieces assigned on.
  */
 function assignPieces(square) {
     if (square.dataset.colour === "white") {
@@ -77,7 +77,7 @@ function assignPieces(square) {
 
 /**
  * Check which piece is selected and calls the relevant movement function.
- * Parameter - HTML Object (square)
+ * @param square The HTML object for a square on the chessboard. that will be checked to see which piece occupies it.
  */
 function checkSquare(square) {
     if (square.textContent === "X") {
@@ -135,7 +135,7 @@ function checkSquare(square) {
  * also checks to see if capture is possible on diagonals.
  * Moves: 1 or 2 squares forwards.
  * Captures: 1 square diagonalally left and right.
- * Parameter - HTML Object (pawn)
+ * @param pawn The HTML object for the square of the chessboard that contains the pawn piece.
  */
 function pawnMoves(pawn) {
     let moves;
@@ -194,7 +194,7 @@ function pawnMoves(pawn) {
 /**
  * Controls the movement of the rook piece.  
  * Moves/Captures: 8 squares forwards, backwards, left and right.
- * Parameter - HTML Object (rook)
+ * @param rook The HTML object for the square of the chessboard that contains the rook piece.
  */
 function rookMoves(rook) {
     let moves = 8;
@@ -225,7 +225,7 @@ function rookMoves(rook) {
 /**
  * Controls the movement of the bishop piece.  
  * Moves/Captures: 8 squares diagonally in each direction.
- * Parameter - HTML Object (bishop)
+ * @param bishop The HTML object for the square of the chessboard that contains the bishop piece.
  */
 function bishopMoves(bishop) {
     let moves = 8;
@@ -255,9 +255,9 @@ function bishopMoves(bishop) {
 
 /**
  * Controls the movement of the knight piece.  
- * Moves: 2 squares left/right + 1 square forward / 2 squares forward + 1 square left/right.
+ * Moves: 2 squares left/right + 1 square forward / 2 squares forward + 1 square left / right.
  * Capture: Only captures sqiares it lands on.
- * Parameter - HTML Object (knight)
+ * @param knight The HTML object for the square of the chessboard that contains the knight piece.
  */
 function knightMoves(knight) {
     let moves = 1;
@@ -296,9 +296,9 @@ function knightMoves(knight) {
 /**
  * Controls the movement of the king piece.  
  * Moves/Captures: 1 square in every direction.
- * Parameter - HTML Object (king)
+ * @param king The HTML object for the square of the chessboard that contains the king piece.
  */
-function kingMoves(king){
+function kingMoves(king) {
     let moves = 1;
     let position = [king.dataset.file, king.dataset.rank];
     let destinations = [];
@@ -342,7 +342,7 @@ function kingMoves(king){
 /**
  * Controls the movement of the queen piece.  
  * Moves/Captures: 8 squares in every direction.
- * Parameter - HTML Object (queen)
+ * @param queen The HTML object for the square of the chessboard that contains the queen piece.
  */
 function queenMoves(queen){
     let moves = 8;
@@ -371,7 +371,8 @@ function queenMoves(queen){
 }
 
 /**
- * Gets the current player turn from the DOM and returns.
+ * Gets the current player turn from the DOM and returns it.
+ * @returns turn The value of which player is active this turn.
  */
 function getCurrentTurn() {
     turn = document.getElementById("player-turn").textContent.toLowerCase();
@@ -391,8 +392,10 @@ function changeCurrentTurn() {
 }
 
 /**
- * Get the HTML object (square) from the position parameters.
- * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
+ * Get the HTML object of a chessboard square from the position parameters.
+ * @param file The position of the piece, on the chessboard in the x-axis.
+ * @param rank The position of the piece, on the chessboard in the y-axis.
+ * @returns newSquare The HTML object of the chessboard square.
  */
 function getSquare(file, rank) {
     let newSquare;
@@ -409,10 +412,12 @@ function getSquare(file, rank) {
 
 /**
  * Checks through the movement of a piece and performs validation on each movement position.
- * Parameters - incrementFile (the number that the file position should be incremented each move), 
- * incrementRank(the number that the rank position should be incremented each move), 
- * numberOfMoves(the number moves a piece makes), position(the original position of the piece), 
- * capture (A boolean for if the piece can capture during this movement)
+ * @param incrementFile The number that the file position should be incremented each move.
+ * @param incrementRank The number that the rank position should be incremented each move.
+ * @param numberOfMoves The number of moves a piece makes.
+ * @param position The original position of the piece, including file and rank.
+ * @param capture If the piece can capture during this movement.
+ * @returns emptySquares The valid squares that can be highlighted for the movement.
  */
 function checkSquares(incrementFile, incrementRank, numberOfMoves, position, capture) {
     let file = position[0];
@@ -473,7 +478,9 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
 /**
  * Checks the file and rank of a piece to see if they are within the bounds of the chessboard.
- * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
+ * @param file The x-axis of piece on the board.
+ * @param rank The y-axis of piece on the board.
+ * @returns isValid If the piece is within the chessboard limits.
  */
 function checkValidPosition(file, rank) {
     let validFiles = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
@@ -491,7 +498,7 @@ function checkValidPosition(file, rank) {
 /**
  * Adds a class to the square to change the square to red, signalling that a piece can be captured.
  * Stores the piece and colour of the piece that will be captured, so that they can be reset if needed.
- * Parameter - HTML Object (square), the square of the piece that will be captured.
+ * @param square The HTML Object of the square, containing the piece that will be captured.
  */
 function captureSquare(square) {
     // Change the square colour to be red
@@ -501,8 +508,10 @@ function captureSquare(square) {
 }
 
 /**
- * Checks to see if the provided square is occupied by another piece, returns boolean.
- * Parameters - file (x-axis of piece on the board), rank (y-axis of piece on the board).
+ * Checks to see if the provided square is occupied by another piece.
+ * @param file The x-axis of piece on the board.
+ * @param rank The y-axis of piece on the board.
+ * @returns isOccupied If the square at the position is occupied by a piece.
  */
 function checkSquareOccupied(file, rank) {
     let isOccupied = false;
@@ -519,8 +528,8 @@ function checkSquareOccupied(file, rank) {
 /**
  * Highlights the provided square, to allow the player to know where they can move to.
  * Also stores the position of the piece that can move to the highlighted square.
- * Parameters - newPosition (file and rank of destination square), 
- * oldPosition (file and rank of piece that can move to the highlighted square)
+ * @param newPosition The file and rank of the destination square.
+ * @param oldPosition The file and rank of the piece that can move to the highlighted square.
  */
 function highlightSquare(newPosition, oldPosition) {
     square = getSquare(newPosition[0], newPosition[1]);
@@ -553,7 +562,7 @@ function resetHighlightedSquares() {
 
 /**
  * Resets the attributes, content and class of a highlighted capture piece.
- * Parameters - square (the HTML object) of a square that contains a highlighted capture piece.
+ * @param square The HTML object of a square that contains a highlighted piece to be captured.
  */
 function resetCapturePiece(square) {
     square.setAttribute('data-piece', square.getAttribute('data-capture-piece'));
@@ -569,7 +578,8 @@ function resetCapturePiece(square) {
 
 /**
  * Moves the data attributes and the chess piece from an old square to a new one.
- * Parameters - newPosition (file and rank of destination square), oldPosition (file and rank of source square)
+ * @param newPosition The file and rank of the destination square.
+ * @param oldPosition The file and rank of the source square.
  */
 function moveToSquare(newPosition, oldPosition) {
 
@@ -597,8 +607,9 @@ function moveToSquare(newPosition, oldPosition) {
 }
 
 /**
- * Returns the point value of each piece that is provided to it.
- * Parameter - piece (String - the name of a chess piece).
+ * Returns the point value of the piece that is provided to it.
+ * @param piece The name of a chess piece, to get the points for.
+ * @returns points.get(piece) The points value of the provided piece.
  */
 function getPoints(piece) {
     const points = new Map([
@@ -615,7 +626,8 @@ function getPoints(piece) {
 
 /**
  * Gets the player score of the provided player.
- * Parameter - player (lowercase string of the player that you want to check the score of).
+ * @param player The lowercase string, of the player that is to have their score checked.
+ * @returns score The score value of the provided player.
  */
  function getCurrentScore(player) {
     score = Number(document.getElementById(`points-${player}`).textContent);
@@ -625,8 +637,8 @@ function getPoints(piece) {
 
 /**
  * Edits the HTML of the provided player's points, and assigns a new score.
- * Parameters - player (lowercase string of the player that you want to edit the score of), 
- * newScore (the value to replace the original score)
+ * @param player The lowercase string of the player that will have their score edited.
+ * @param newScore The new value of the players score.
  */
  function changeCurrentScore(player, newScore) {
     document.getElementById(`points-${player}`).textContent = newScore;
