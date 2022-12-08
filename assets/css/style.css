@@ -5,41 +5,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
 
 .chessboard {
-    display: grid;
-    justify-content: center;
-  
-    padding-top: 5%;
-  
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
-  }
-  
-  .box {
-    font-size: 40px;
-    text-align: center;
-  }
-  
-  .white {
-    background-color: white;
-  }
-  
-  .black {
-    background-color: lightgrey;
-  }
+  display: grid;
+  justify-content: center;
 
-  .red {
-    background-color: red;
-  }
+  padding-top: 5%;
 
-  h1 {
-    text-align: center;
-    font-family: 'Acme', sans-serif;
-  }
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+}
 
-  h2 {
-    font-family: 'Acme', sans-serif;
-  }
+.box {
+  font-size: 40px;
+  text-align: center;
+}
 
-  p {
-    font-family: 'Exo', sans-serif;
-  }
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: lightgrey;
+}
+
+.red {
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+}
+
+h2 {
+  font-family: 'Acme', sans-serif;
+}
+
+p {
+  font-family: 'Exo', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-controls {
+  text-align: center;
+}
+
+.player-info {
+  text-align: center;
+}
