@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
             location.reload();
         });
     }
-    
-
-
     // Gets all squares on the board
     let squares = document.getElementsByClassName("box");
 
