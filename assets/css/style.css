@@ -1,3 +1,9 @@
+/* https://fonts.google.com/specimen/Acme?query=acme */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+/* https://fonts.google.com/specimen/Exo?query=exo */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+
 .chessboard {
     display: grid;
     justify-content: center;
@@ -27,4 +33,13 @@
 
   h1 {
     text-align: center;
+    font-family: 'Acme', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Acme', sans-serif;
+  }
+
+  p {
+    font-family: 'Exo', sans-serif;
   }
