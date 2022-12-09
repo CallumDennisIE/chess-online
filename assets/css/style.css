@@ -8,12 +8,12 @@
   display: grid;
   justify-content: center;
 
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px;
+  grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px;
 }
 
 .box {
-  font-size: 40px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -30,12 +30,17 @@
 }
 
 h1 {
+  font-size: smaller;
+}
+h1 {
+  font-size: 25pt;
   text-align: center;
   font-family: 'Acme', sans-serif;
 }
 
 h2 {
   font-family: 'Acme', sans-serif;
+  font-size: 20pt;
 }
 
 p {
@@ -58,4 +63,23 @@ body {
 .winbox {
   display: none;
   font-size: x-large;
+}
+
+/* Media Query for larger screen sizes */
+@media screen and (min-width: 480px) {
+  .chessboard {
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+  }
+  
+  .box {
+    font-size: 40px;
+  }
+  h1 {
+    font-size: 32pt;
+  }
+  h2 {
+    font-size: 26pt;
+  }
+  
 }
