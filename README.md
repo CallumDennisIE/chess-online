@@ -41,7 +41,15 @@
 
 ## Design
 ### Colour Scheme
+The project uses a very simple colour scheme to match the pieces on a chessboard. The text is black on a white background, to create a strong contrast, the chess pieces are also either fully black or white with a black outline, making it very clear which piece is for a specific player.
 
+The chessboard is alternating white and grey squares, to allow both white and black pieces to contrast well off of the background. The only other colour is the red for highlighting a square to be captured, this is a strong colour to make it clear when a piece is able to be captured, as this is part of the win condition for the game.
+<details>
+<summary>Click for Image: Colour Palette</summary>
+
+![Colour Palette](/assets/images/README/palette-colours.png)
+
+</details>
 
 ### Typography
 
