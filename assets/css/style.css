@@ -36,6 +36,7 @@ h1 {
   font-size: 25pt;
   text-align: center;
   font-family: 'Acme', sans-serif;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -80,6 +81,32 @@ table {
 
 th {
   padding: 10px;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+header li {
+  list-style: none;
+  text-align: center;
+}
+
+header ul {
+  padding: 0;
+  margin-top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
 
 /* Media Query for larger screen sizes */
