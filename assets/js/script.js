@@ -92,6 +92,8 @@ function checkSquare(square) {
             // Changes the current score by getting the passing the current player and (the current score + the point value of the captured piece)
             changeCurrentScore(getCurrentTurn(), getCurrentScore(getCurrentTurn()) + getPoints(square.dataset.piece));
 
+            // Check to see if the current player has won
+            checkWinner(getCurrentScore(getCurrentTurn()), getCurrentTurn());
         }
 
         moveToSquare(position, mover);
@@ -642,4 +644,17 @@ function getPoints(piece) {
  */
  function changeCurrentScore(player, newScore) {
     document.getElementById(`points-${player}`).textContent = newScore;
+}
+
+/**
+ * Check the provided score to see if the current player has won the game.
+ * @param score, the value checked to see if it matches or exceeds the maximum number of availible points
+ * @param player The lowercase string of the player that is checked to see if they have won.
+ */
+function checkWinner(score, player) {
+    let winner;
+    const MAX_POINTS = 54;
+    if (score >= MAX_POINTS) {
+        winner = player;
+    }
 }
