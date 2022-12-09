@@ -652,7 +652,6 @@ function getPoints(piece) {
  * @param player The lowercase string of the player that is checked to see if they have won.
  */
 function checkWinner(score, player) {
-    alert('Called');
     let winner;
     const MAX_POINTS = 54;
     if (score >= MAX_POINTS) {
