@@ -647,14 +647,34 @@ function getPoints(piece) {
 }
 
 /**
- * Check the provided score to see if the current player has won the game.
- * @param score, the value checked to see if it matches or exceeds the maximum number of availible points
+ * Check the provided score to see if the current player has won the game. If they have won, call the displayWinner function.
+ * @param score, the value checked to see if it matches or exceeds the maximum number of availible points.
  * @param player The lowercase string of the player that is checked to see if they have won.
  */
 function checkWinner(score, player) {
+    alert('Called');
     let winner;
     const MAX_POINTS = 54;
     if (score >= MAX_POINTS) {
         winner = player;
+        displayWinner(winner);
+    }
+}
+
+/**
+ * Capitlaise the first letter of the iwnning player and display them in the HTML.
+ * @param player The lowercase string of the player that is displayed as the winner.
+ */
+function displayWinner(player) {
+    // Capitalise the first letter of the winning player
+    let winner = player.charAt(0).toUpperCase() + player.slice(1);
+
+    // Set the HTML content to include the winning players name
+    document.getElementById('winner').textContent = winner;
+    winbox = document.getElementsByClassName('winbox');
+
+    // Show the winning player
+    for (box of winbox) {
+        box.style.display = 'block';
     }
 }

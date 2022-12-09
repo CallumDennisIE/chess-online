@@ -56,3 +56,8 @@ body {
 .player-info {
   text-align: center;
 }
+
+.winbox {
+  display: none;
+  font-size: x-large;
+}
