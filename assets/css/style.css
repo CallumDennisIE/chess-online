@@ -43,6 +43,10 @@ h2 {
   font-size: 20pt;
 }
 
+h3 {
+  font-family: 'Acme', sans-serif;
+}
+
 p {
   font-family: 'Exo', sans-serif;
 }
@@ -63,6 +67,19 @@ body {
 .winbox {
   display: none;
   font-size: x-large;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.piece {
+  font-size: 25px;
+}
+
+th {
+  padding: 10px;
 }
 
 /* Media Query for larger screen sizes */
