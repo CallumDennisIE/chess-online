@@ -377,7 +377,7 @@ function queenMoves(queen){
  * @returns turn The value of which player is active this turn.
  */
 function getCurrentTurn() {
-    turn = document.getElementById("player-turn").textContent.toLowerCase();
+    let turn = document.getElementById("player-turn").textContent.toLowerCase();
 
     return (turn);
 }
@@ -534,7 +534,7 @@ function checkSquareOccupied(file, rank) {
  * @param oldPosition The file and rank of the piece that can move to the highlighted square.
  */
 function highlightSquare(newPosition, oldPosition) {
-    square = getSquare(newPosition[0], newPosition[1]);
+    let square = getSquare(newPosition[0], newPosition[1]);
     // Highlights the selected square 
     square.textContent = "X";
 
@@ -632,7 +632,7 @@ function getPoints(piece) {
  * @returns score The score value of the provided player.
  */
  function getCurrentScore(player) {
-    score = Number(document.getElementById(`points-${player}`).textContent);
+    let score = Number(document.getElementById(`points-${player}`).textContent);
 
     return (score);
 }
@@ -670,7 +670,7 @@ function displayWinner(player) {
 
     // Set the HTML content to include the winning players name
     document.getElementById('winner').textContent = winner;
-    winbox = document.getElementsByClassName('winbox');
+    let winbox = document.getElementsByClassName('winbox');
 
     // Show the winning player
     for (let box of winbox) {
