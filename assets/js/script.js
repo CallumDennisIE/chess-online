@@ -673,7 +673,7 @@ function displayWinner(player) {
     winbox = document.getElementsByClassName('winbox');
 
     // Show the winning player
-    for (box of winbox) {
+    for (let box of winbox) {
         box.style.display = 'block';
     }
 }
