@@ -62,6 +62,17 @@ The fonts used in this project are taken from [Google Fonts](https://fonts.googl
 
 ### Imagery
 
+The only image files used in the project were for the favicon, which is displayed on all HTML pages.
+
+<details>
+<summary>Click for Image: Favicon</summary>
+
+![The favicon image](/assets/images/favicon/apple-touch-icon.png)
+
+</details>
+
+
+
 ### Wireframes
 
 Chessboard at Game Start - Wireframes:
@@ -119,6 +130,8 @@ Chessboard when Capturing a Piece - Wireframes:
     - The project was developed using Gitpod development environment.
 - [CodePen](https://codepen.io/):
     - Features were tested on CodePen, to test functions in isolation of the main project.
+- [Favicon](https://favicon.io/):
+    - A favicon was generated from this website and applied to the HTML pages.
 
 
 [Back to top!](#chess-online)
