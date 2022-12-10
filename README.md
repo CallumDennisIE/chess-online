@@ -132,6 +132,8 @@ Chessboard when Capturing a Piece - Wireframes:
     - The project was developed using Gitpod development environment.
 - [CodePen](https://codepen.io/):
     - Features were tested on CodePen, to test functions in isolation of the main project.
+- [Coolers](https://coolors.co/):
+    - Coolers was used to generate the colour palette for the project.
 - [Favicon](https://favicon.io/):
     - A favicon was generated from this website and applied to the HTML pages.
 - [Balsamiq](https://balsamiq.com/):
@@ -140,8 +142,20 @@ Chessboard when Capturing a Piece - Wireframes:
     - The 'Reset Game' icon was taken from the Font Awesome Icons.
 - [Google Fonts](https://fonts.google.com/):
     - The fonts used in the project were imported from Google Fonts.
+- [TinyPNG](https://tinypng.com/):
+    - All images in the README and project have been compressed using TinyPNG.
 - [Am I Responsive?](https://ui.dev/amiresponsive):
-    - The title image of the README was taken from this site. The image shows the site on multiple devices. 
+    - The title image of the README was taken from this site. The image shows the site on multiple devices.
+- [WAVE](https://wave.webaim.org/):
+    - The WAVE tool was used to test the accessibility of all pages.
+- [W3C Validator](https://validator.w3.org/)
+    - All HTML used in the project was validated using the W3C HTML Validator.
+- [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+    - All of the CSS file used in the project was validated with the W3C CSS validator.
+- [JSHint](https://jshint.com/)
+    - The JavaScript code was validated using the JSHint website tool.
+- [Chrome Developer Tool - Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+    - Performance, Accessibility, Best Practices and SEO across the project was tested using Lighthouse.
 
 
 [Back to top!](#chess-online)
