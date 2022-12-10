@@ -65,3 +65,19 @@ Help Page Results:
 404 Page Results:
 
 ![404 page mobile lighthouse results](/assets/images/TESTING/lighthouse-404-mobile.png)
+
+### WAVE Report
+
+The accessibility of the pages was checked using the WAVE web accessibility evaluation tool
+
+Play Page Results:
+
+![Play page mobile WAVE results](/assets/images/TESTING/wave-play.png)
+
+Help Page Results:
+
+![Help page mobile WAVE results](/assets/images/TESTING/wave-help.png)
+
+404 Page Results:
+
+![404 page mobile WAVE results](/assets/images/TESTING/wave-404.png)
