@@ -31,7 +31,7 @@ for (let square of squares) {
 }
 ```
 
-The code iterates through each square and adds a event listener to each of the boxes within the chessbox. As the code is required to add the listener and the warning is not a significant issue, the code has been kept and the warning has been documented here.
+The code iterates through each square and adds an event listener to each of the boxes within the chessboard. As the code is required to add the listener and the warning is not a significant issue, the code has been kept and the warning has been documented here.
 
 ### Lighthouse
 Performance, Accessibility, Best Practices and SEO, were checked using the Chrome Developer Tool - Lighthouse.
