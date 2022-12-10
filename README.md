@@ -162,8 +162,40 @@ Chessboard when Capturing a Piece - Wireframes:
 
 ## Deployment & Local Development
 ### Deployment
+The Chess Online project was deployed using GitHub Pages.
 
+[You can view the live site through this link.](https://callumdennisie.github.io/chess-online/)
+
+Steps to deploy this project using GitHub Pages:
+1. Navigate to the GitHub repository for this project: [CallumDennisIE/chess-online](https://github.com/CallumDennisIE/chess-online).
+2. Click on the 'Settings' tab: [CallumDennisIE/chess-online/settings](https://github.com/CallumDennisIE/chess-online/settings).
+3. Click on the 'Pages' section: [CallumDennisIE/chess-online/settings/pages](https://github.com/CallumDennisIE/chess-online/settings/pages)
+4. Select the 'Main' source from the dropdown.
+5. Wait a few minutes for the site to deploy.
+6. The project will be published and a link will be provided to the live site: [Example link](https://callumdennisie.github.io/chess-online/).
+
+For more information on how to deploy a site with GitHub pages, please click [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+***
 ### Local Development
+Steps to fork this project using GitHub:
+1. Navigate to the GitHub repository for this project: [CallumDennisIE/chess-online](https://github.com/CallumDennisIE/chess-online).
+2. Click the 'Fork' button (top right-hand side of the repository page).
+
+For more information on how to fork a GitHub repository please click [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+Steps to clone this project using GitHub:
+1. Navigate to the GitHub repository for this project: [CallumDennisIE/chess-online](https://github.com/CallumDennisIE/chess-online).
+2. Click on the 'Code' button, located above the project files.
+3. Select 'HTTPS' as the method to clone the repository.
+4. Copy the link provided, located under 'HTTPS': https://github.com/CallumDennisIE/chess-online.git
+5. Open the Terminal in the location you would like the repository to be cloned to.
+6. Type `git clone` and then the link provided in step 4:
+
+``` $ git clone  https://github.com/CallumDennisIE/chess-online.git ```
+
+
+For more information on how to clone a GitHub repository please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 [Back to top!](#chess-online)
 
