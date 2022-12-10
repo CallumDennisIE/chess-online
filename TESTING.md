@@ -16,3 +16,36 @@ All HTML files were validated using the W3C Validator. The results are shown bel
 The CSS file was validated using the W3C Jigsaw Validator. The result is below:
 
 - style.css - No Error Found.
+
+### Lighthouse
+The Chrome Developer Tool Lighthouse was used to test the following factors across the project: performance, accessibility, best practices and SEO.
+
+#### Desktop Results:
+
+Play Page Results:
+
+![Play page desktop lighthouse results](/assets/images/TESTING/lighthouse-play-desktop.png)
+
+Help Page Results:
+
+![Help page desktop lighthouse results](/assets/images/TESTING/lighthouse-help-desktop.png)
+
+404 Page Results:
+
+![404 page desktop lighthouse results](/assets/images/TESTING/lighthouse-404-desktop.png)
+
+---
+
+#### Mobile Results:
+
+Play Page Results:
+
+![Play page mobile lighthouse results](/assets/images/TESTING/lighthouse-play-mobile.png)
+
+Help Page Results:
+
+![Help page mobile lighthouse results](/assets/images/TESTING/lighthouse-help-mobile.png)
+
+404 Page Results:
+
+![404 page mobile lighthouse results](/assets/images/TESTING/lighthouse-404-mobile.png)
