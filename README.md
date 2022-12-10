@@ -52,6 +52,12 @@ The chessboard is alternating white and grey squares, to allow both white and bl
 </details>
 
 ### Typography
+The fonts used in this project are taken from [Google Fonts](https://fonts.google.com/).
+
+- The font [Acme](https://fonts.google.com/specimen/Acme?query=acme) was used for the headings.
+- [Exo](https://fonts.google.com/specimen/Exo?query=exo) was used for the remaining text on the project.
+- If the fonts from Google Fonts could not be displayed, then 'Sans-serif' was used as a backup font.
+
 
 
 ### Imagery
