@@ -18,7 +18,7 @@ The CSS file was validated using the W3C Jigsaw Validator. The result is below:
 - style.css - No Error Found.
 
 ### Lighthouse
-The Chrome Developer Tool Lighthouse was used to test the following factors across the project: performance, accessibility, best practices and SEO.
+Performance, Accessibility, Best Practices and SEO, were checked using the Chrome Developer Tool - Lighthouse.
 
 #### Desktop Results:
 

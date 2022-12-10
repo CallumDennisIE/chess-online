@@ -73,7 +73,7 @@ function assignPieces(square) {
                 break;
         }
     }
-};
+}
 
 /**
  * Check which piece is selected and calls the relevant movement function.
@@ -83,8 +83,8 @@ function checkSquare(square) {
     if (square.textContent === "X") {
         // if highlighted then moveToSquare()
 
-        let position = [square.dataset.file, square.dataset.rank]
-        let mover = [square.getAttribute('data-mover-file'), square.getAttribute('data-mover-rank')]
+        let position = [square.dataset.file, square.dataset.rank];
+        let mover = [square.getAttribute('data-mover-file'), square.getAttribute('data-mover-rank')];
 
         // If the square being moved to, contains a piece to be captured
         if (square.classList.contains('red')) {
@@ -185,8 +185,8 @@ function pawnMoves(pawn) {
                 if (target.classList.contains('red')) {
 
                     // Add the X mark on the square
-                    let targetPosition = [value[0], value[1]]
-                    highlightSquare(targetPosition, position)
+                    let targetPosition = [value[0], value[1]];
+                    highlightSquare(targetPosition, position);
                 }
             }
         }
@@ -409,7 +409,7 @@ function getSquare(file, rank) {
             newSquare = square;
         }
     }
-    return (newSquare)
+    return (newSquare);
 }
 
 /**
@@ -438,7 +438,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
         newPosition = [file, rank];
         // Add values to array
-        squares.push(newPosition)
+        squares.push(newPosition);
     }
     // Validate Squares
     let validSquares = [];
@@ -448,7 +448,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     // Checks to see if the square is valid
     for (let square of squares) {
         if (checkValidPosition(square[0], square[1])) {
-            let validPosition = [square[0], square[1]]
+            let validPosition = [square[0], square[1]];
             validSquares.push(validPosition);
         }
     }
