@@ -132,6 +132,12 @@ Chessboard when Capturing a Piece - Wireframes:
     - Features were tested on CodePen, to test functions in isolation of the main project.
 - [Favicon](https://favicon.io/):
     - A favicon was generated from this website and applied to the HTML pages.
+- [Balsamiq](https://balsamiq.com/):
+    - Balsamiq was used to create the wireframes for the project.
+- [Font Awesome](https://fontawesome.com/):
+    - The 'Reset Game' icon was taken from the Font Awesome Icons.
+- [Google Fonts](https://fonts.google.com/):
+    - The fonts used in the project were imported from Google Fonts.
 
 
 [Back to top!](#chess-online)
