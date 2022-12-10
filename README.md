@@ -1,5 +1,7 @@
 # Chess Online
 
+![Chess Online Site on multiple devices](/assets/images/README/responsive-design.png)
+
 [View the live project here.](https://callumdennisie.github.io/chess-online/)
 
 ## Contents
@@ -138,6 +140,8 @@ Chessboard when Capturing a Piece - Wireframes:
     - The 'Reset Game' icon was taken from the Font Awesome Icons.
 - [Google Fonts](https://fonts.google.com/):
     - The fonts used in the project were imported from Google Fonts.
+- [Am I Responsive?](https://ui.dev/amiresponsive):
+    - The title image of the README was taken from this site. The image shows the site on multiple devices. 
 
 
 [Back to top!](#chess-online)
