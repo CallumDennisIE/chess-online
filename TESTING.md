@@ -17,6 +17,22 @@ The CSS file was validated using the W3C Jigsaw Validator. The result is below:
 
 - style.css - No Error Found.
 
+## JSHint
+JSHint showed 0 errors and only a single warning. This warning is provided below:
+
+![JSHint warning](/assets/images/TESTING/jshint-warning.png)
+
+The warning is in relation to the following code:
+```
+for (let square of squares) {
+    square.addEventListener("click", function () {
+        checkSquare(square);
+    });
+}
+```
+
+The code iterates through each square and adds a event listener to each of the boxes within the chessbox. As the code is required to add the listener and the warning is not a significant issue, the code has been kept and the warning has been documented here.
+
 ### Lighthouse
 Performance, Accessibility, Best Practices and SEO, were checked using the Chrome Developer Tool - Lighthouse.
 
