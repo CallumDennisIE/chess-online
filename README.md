@@ -154,6 +154,7 @@ Chessboard when Capturing a Piece - Wireframes:
 [Back to top!](#chess-online)
 
 ## Testing
+[View the project testing document here.](TESTING.md)
 
 ## Credits
 ### Code
