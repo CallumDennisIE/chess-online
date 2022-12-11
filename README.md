@@ -40,10 +40,9 @@ The game is aimed at people interested in playing chess, that do not have to wor
 - I want to know how to control the pieces in the game.
 - I do not want to have to learn complex moves in order to play.
 
-#### User that wants to practice playing chess, without unnecessary  rules:
+#### User that wants to practice playing chess:
 - I want to be able to move pieces in the same way that they move in chess.
 - I want the game to look like a classic chess game.
-
 
 #### User that wants to compete with their friend:
 - I want to be able to capture my friend's pieces.
