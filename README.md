@@ -26,6 +26,11 @@
     * [Media](#media)
 
 ## About
+Chess Online is a variant of the classic game chess. In this game, 2 players use different pieces to move around the chessboard and try to capture all of their opponent's pieces. 
+
+Each piece has a different set of moves and a different point value if they are captured. The player that captures all of their opponent's pieces (and gets all 52 points) wins!
+
+The game is aimed at people interested in playing chess, that do not have to worry about complex chess rules such as 'En Passant' or 'castling'. The game was created to allow first-time players of chess to understand the basic movement and rules, and also to have fun at the same time.
 
 [Back to top!](#chess-online)
 
