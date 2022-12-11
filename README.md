@@ -136,6 +136,26 @@ The favicon uses the same colour scheme and Unicode icon as the pieces on the ch
 
 </details>
 
+### Navbar
+
+The navbar is included on all pages of the project. The design is consistent on all pages to provide a consistent user experience. Contains the website title and links to the index.html and the help.html pages.
+
+<details>
+<summary>Click for Image: Navbar</summary>
+
+![The navbar image](/assets/images/README/feature-navbar.png)
+
+</details>
+
+The links of the navbar are also underlined on hover, to show that they can be clicked.
+
+<details>
+<summary>Click for Image: Navbar on hover</summary>
+
+![The navbar when a link is hovered over image](/assets/images/README/feature-navbar-hover.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
