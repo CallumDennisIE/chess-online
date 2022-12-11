@@ -100,10 +100,10 @@ function checkSquare(square) {
 
     } else {
 
-        // If a non highlighted square is clicked, reset the highlighted squares
+        // If a non-highlighted square is clicked, reset the highlighted squares
         resetHighlightedSquares();
 
-        // Check if current turn matches colour of selected piece
+        // Check if the current turn matches the colour of the selected piece
         if (getCurrentTurn() === square.dataset.colour) {
 
             // Get the data attribute 'piece' from the selected square
@@ -133,10 +133,10 @@ function checkSquare(square) {
 }
 
 /**
- * Controls the movement of the pawn piece. Checks to see if pawn has moved and assigns movement distance, 
+ * Controls the movement of the pawn piece. Checks to see if the pawn has moved and assigns movement distance, 
  * also checks to see if capture is possible on diagonals.
  * Moves: 1 or 2 squares forwards.
- * Captures: 1 square diagonalally left and right.
+ * Captures: 1 square diagonally left and right.
  * @param pawn The HTML object for the square of the chessboard that contains the pawn piece.
  */
 function pawnMoves(pawn) {
@@ -144,7 +144,7 @@ function pawnMoves(pawn) {
     let position = [pawn.dataset.file, pawn.dataset.rank];
     let destinations = [];
 
-    // Set the ammount of squares moved, based on if the piece has moved previously
+    // Set the number of squares moved, based on if the piece has moved previously
     if (pawn.hasAttribute("data-has-moved")) {
         moves = 1;
     } else {
@@ -153,7 +153,7 @@ function pawnMoves(pawn) {
 
     // Set direction of movement based on current player turn
     if (getCurrentTurn() === "white") {
-        // Move forward by number of moves
+        // Move forward by a number of moves
         let forwards = checkSquares(0, 1, moves, position, false);
 
         // Capture right/left diagonal
@@ -161,7 +161,7 @@ function pawnMoves(pawn) {
         let leftForwards = checkSquares(-1, 1, 1, position, true);
         destinations = [forwards, rightForwards, leftForwards];
     } else {
-        // Move forward by number of moves
+        // Move backwards by a number of moves
         let backwards = checkSquares(0, -1, moves, position, false);
 
         // Capture right/left diagonal
@@ -258,7 +258,7 @@ function bishopMoves(bishop) {
 /**
  * Controls the movement of the knight piece.  
  * Moves: 2 squares left/right + 1 square forward / 2 squares forward + 1 square left / right.
- * Capture: Only captures sqiares it lands on.
+ * Capture: Only captures squares it lands on.
  * @param knight The HTML object for the square of the chessboard that contains the knight piece.
  */
 function knightMoves(knight) {
@@ -430,7 +430,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
     // Repeat for the number of moves specified
     for (let moves = 0; moves < numberOfMoves; moves++) {
 
-        // Increase or decrease position in alphabet of file value
+        // Increase or decrease position in the alphabet of file value
         file = String.fromCharCode(file.charCodeAt(0) + incrementFile);
 
         // Increase or decrease rank value
@@ -461,7 +461,7 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
             if (checkSquareOccupied(validSquare[0], validSquare[1])) {
                 hitOccupied = true;
 
-                // If move is to caputre a piece then call capture function
+                // If the move is to capture a piece, then call the capture function
                 if (capture) {
                     let squareToCapture = getSquare(validSquare[0], validSquare[1]);
                     if (squareToCapture.dataset.colour !== getCurrentTurn()) {
@@ -480,8 +480,8 @@ function checkSquares(incrementFile, incrementRank, numberOfMoves, position, cap
 
 /**
  * Checks the file and rank of a piece to see if they are within the bounds of the chessboard.
- * @param file The x-axis of piece on the board.
- * @param rank The y-axis of piece on the board.
+ * @param file The x-axis of the piece on the board.
+ * @param rank The y-axis of the piece on the board.
  * @returns isValid If the piece is within the chessboard limits.
  */
 function checkValidPosition(file, rank) {
@@ -503,7 +503,7 @@ function checkValidPosition(file, rank) {
  * @param square The HTML Object of the square, containing the piece that will be captured.
  */
 function captureSquare(square) {
-    // Change the square colour to be red
+    // Change the square colour to red
     square.classList.add('red');
     square.setAttribute('data-capture-piece', square.dataset.piece);
     square.setAttribute('data-capture-colour', square.dataset.colour);
@@ -511,8 +511,8 @@ function captureSquare(square) {
 
 /**
  * Checks to see if the provided square is occupied by another piece.
- * @param file The x-axis of piece on the board.
- * @param rank The y-axis of piece on the board.
+ * @param file The x-axis of the piece on the board.
+ * @param rank The y-axis of the piece on the board.
  * @returns isOccupied If the square at the position is occupied by a piece.
  */
 function checkSquareOccupied(file, rank) {
@@ -604,7 +604,7 @@ function moveToSquare(newPosition, oldPosition) {
     oldSquare.removeAttribute('data-mover-file');
     oldSquare.removeAttribute('data-mover-rank');
 
-    // Change the current players turn
+    // Change the current player's turn
     changeCurrentTurn();
 }
 
@@ -640,7 +640,7 @@ function getPoints(piece) {
 /**
  * Edits the HTML of the provided player's points, and assigns a new score.
  * @param player The lowercase string of the player that will have their score edited.
- * @param newScore The new value of the players score.
+ * @param newScore The new value of the player's score.
  */
  function changeCurrentScore(player, newScore) {
     document.getElementById(`points-${player}`).textContent = newScore;
@@ -648,7 +648,7 @@ function getPoints(piece) {
 
 /**
  * Check the provided score to see if the current player has won the game. If they have won, call the displayWinner function.
- * @param score, the value checked to see if it matches or exceeds the maximum number of availible points.
+ * @param score, the value checked to see if it matches or exceeds the maximum number of available points.
  * @param player The lowercase string of the player that is checked to see if they have won.
  */
 function checkWinner(score, player) {
@@ -661,14 +661,14 @@ function checkWinner(score, player) {
 }
 
 /**
- * Capitlaise the first letter of the iwnning player and display them in the HTML.
+ * Capitalise the first letter of the winning player and display them in the HTML.
  * @param player The lowercase string of the player that is displayed as the winner.
  */
 function displayWinner(player) {
     // Capitalise the first letter of the winning player
     let winner = player.charAt(0).toUpperCase() + player.slice(1);
 
-    // Set the HTML content to include the winning players name
+    // Set the HTML content to include the winning player's name
     document.getElementById('winner').textContent = winner;
     let winbox = document.getElementsByClassName('winbox');
 
