@@ -213,7 +213,11 @@ For more information on how to clone a GitHub repository please click [here](htt
 
 ## Credits
 ### Code
+All code used in the project was created by me for this project.
 
-### Media
+### Inspiration
+- [Chess.com](https://www.chess.com/)
+    - The project is inspired by the chess player on chess.com, Chess Online is an attempt to emulate this website, while aiming at newer players.
+    - The point values and piece movement rules were taken from the chess.com rules section.
 
 [Back to top!](#chess-online)
