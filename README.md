@@ -177,6 +177,16 @@ The help.html page tells the user what the project is and how to play the game. 
 
 </details>
 
+### Reset Game Button
+The reset game button will refresh the page when click, this will reset all the pieces to their starting location and will reset the scores. This allows players to restart the game if they have won or would like to retry the game.
+
+<details>
+<summary>Click for Image: Reset Game Button</summary>
+
+![The Reset Game Button](/assets/images/README/feature-reset.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
