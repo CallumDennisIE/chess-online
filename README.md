@@ -167,6 +167,16 @@ This page will display when the requested page is not able to be displayed. The 
 
 </details>
 
+### How to play page (help.html)
+The help.html page tells the user what the project is and how to play the game. The page explains the controls such as how to move and how to capture pieces. The page also shows the points value of each piece.
+
+<details>
+<summary>Click for Image: help.html Page</summary>
+
+![The help.html Page](/assets/images/README/feature-help.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
