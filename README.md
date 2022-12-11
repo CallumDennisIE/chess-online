@@ -224,7 +224,7 @@ The reason that players are not informed when they click an opposing piece with 
 <details>
 <summary>Click for Image: Highlighting Movement</summary>
 
-![Highlighting Movement Message](/assets/images/README/feature-highlight.png)
+![Highlighting Movement](/assets/images/README/feature-highlight.png)
 
 </details>
 
@@ -234,7 +234,19 @@ If a highlighted square is clicked on, then the piece will move from its previou
 <details>
 <summary>Click for Image: Piece Movement</summary>
 
-![Piece Movement Message](/assets/images/README/feature-move.png)
+![Piece Movement](/assets/images/README/feature-move.png)
+
+</details>
+
+### Piece Capture
+If a square that would be highlighted by a piece, is occupied by an opposing player's piece, then the opposing player's piece is highlighted with an 'X' and the square is changed to red.
+
+If the highlighted capture square is moved to, then the opposing player's piece is removed from the chessboard and the value of the piece is added to the moving player's score.
+
+<details>
+<summary>Click for Image: Piece Capture</summary>
+
+![Piece Capture](/assets/images/README/feature-capture.png)
 
 </details>
 
