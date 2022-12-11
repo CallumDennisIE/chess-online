@@ -206,6 +206,16 @@ Both players points are displayed underneath the chessboard. The points values a
 
 </details>
 
+### Winning Player Message
+The winning player is displayed in a message above the chessboard. This message is hidden until a player wins the game.
+
+<details>
+<summary>Click for Image: Winning Player Message</summary>
+
+![Winning Player Message](/assets/images/README/feature-winner.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
