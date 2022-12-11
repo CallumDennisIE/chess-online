@@ -124,6 +124,18 @@ Chessboard when Capturing a Piece - Wireframes:
 
 ## Features
 
+### Favicon
+A favicon was created to create a consistent brand image between the HTML pages of the site. Also allows the site to be easily recognised in the tabs of the browser.
+
+The favicon uses the same colour scheme and Unicode icon as the pieces on the chessboard.
+
+<details>
+<summary>Click for Image: Favicon</summary>
+
+![The favicon image](/assets/images/favicon/apple-touch-icon.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
