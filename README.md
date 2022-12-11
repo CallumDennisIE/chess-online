@@ -196,6 +196,16 @@ The player turn indicator shows which player can currently move their pieces. Th
 
 </details>
 
+### Player Points Display
+Both players points are displayed underneath the chessboard. The points values are updated after a piece is captured.
+
+<details>
+<summary>Click for Image: Player Points Display</summary>
+
+![The Player Points Display](/assets/images/README/feature-points.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
