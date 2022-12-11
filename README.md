@@ -228,6 +228,16 @@ The reason that players are not informed when they click an opposing piece with 
 
 </details>
 
+### Piece Movement
+If a highlighted square is clicked on, then the piece will move from its previously occupied square to the new square on the board.
+
+<details>
+<summary>Click for Image: Piece Movement</summary>
+
+![Piece Movement Message](/assets/images/README/feature-move.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
