@@ -156,6 +156,17 @@ The links of the navbar are also underlined on hover, to show that they can be c
 
 </details>
 
+### Custom 404 Error Page
+
+This page will display when the requested page is not able to be displayed. The link on the error page will navigate to the index.html page. The error page also uses the same header as the other HTML pages to allow further navigation.
+
+<details>
+<summary>Click for Image: Custom 404 Error Page</summary>
+
+![The Custom 404 Error Page](/assets/images/README/feature-404.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
