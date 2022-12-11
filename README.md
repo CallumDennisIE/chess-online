@@ -187,6 +187,15 @@ The reset game button will refresh the page when click, this will reset all the 
 
 </details>
 
+### Player Turn Indicator
+The player turn indicator shows which player can currently move their pieces. This will update when the next player can move.
+<details>
+<summary>Click for Image: Player Turn Indicator</summary>
+
+![The Player Turn Indicator](/assets/images/README/feature-turn.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
