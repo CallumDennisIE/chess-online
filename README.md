@@ -216,6 +216,18 @@ The winning player is displayed in a message above the chessboard. This message 
 
 </details>
 
+### Highlighting Movement
+When a player clicks one of their pieces on their turn, they will be shown the available squares that the piece can move to, these squares will be highlighted with an 'X'. If no available squares are present, no squares are shown. If anywhere else is clicked except for a player piece, then the highlighted squares are cleared.
+
+The reason that players are not informed when they click an opposing piece with a message such as "It is not your turn", is that it is distracting to the player and will interrupt the flow of the game.
+
+<details>
+<summary>Click for Image: Highlighting Movement</summary>
+
+![Highlighting Movement Message](/assets/images/README/feature-highlight.png)
+
+</details>
+
 [Back to top!](#chess-online)
 
 ## Technologies Used
