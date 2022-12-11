@@ -36,13 +36,18 @@ The game is aimed at people interested in playing chess, that do not have to wor
 
 ## User Experience
 ### User Stories
-#### Goals of a First-Time Visitor:
+#### User who wants to know how to play:
+- I want to know how to control the pieces in the game.
+- I do not want to have to learn complex moves in order to play.
+
+#### User that wants to practice playing chess, without unnecessary  rules:
+- I want to be able to move pieces in the same way that they move in chess.
+- I want the game to look like a classic chess game.
 
 
-#### Goals of a Returning Visitor:
-
-
-#### Goals of a Frequent Visitor:
+#### User that wants to compete with their friend:
+- I want to be able to capture my friend's pieces.
+- I want the game to have a win condition.
 
 [Back to top!](#chess-online)
 
