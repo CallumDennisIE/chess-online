@@ -101,3 +101,25 @@ Help Page Results:
 |:-------------|:-------------|
 | I want to be able to capture my friend's pieces. | The game is created for two players, which allows people to compete with their friends on the same device. Players can capture their opponent's pieces by clicking on a piece that is within movement range of their opponent's piece, and then clicking on their opponent's piece to capture it. The process of movement and capture is explained more on the ‘help.html’ page.
 | I want the game to have a win condition. | Players can win the game by gaining points by capturing their opponent's pieces. These points are displayed below the chessboard.  If a player captures all of their opponent's pieces, they gain 52 points. A player that gains 52 points wins the game and this is displayed above the chessboard. Players can then click 'Reset Game' to start the game again.
+
+### Full Testing
+The devices used to test are:
+- iPhone 11 Pro Max
+- MacBook Air (M1, 2020) - 13.3-inch (2560 × 1600) Built-in Retina Display
+- MacBook Air (M1, 2020) - 27-inch (2560 × 1440) Display
+
+These tests have been performed on the following browsers:
+- Google Chrome - Desktop
+- Google Chrome - Mobile
+- Safari -  Mobile
+
+#### Features Tested
+- The validation of the highlighted squares. This involved checking that a piece could not be placed outside of the bounds of the chessboard, it also involved testing that a player could not capture or move into their own squares.
+
+- The points values of the pieces were tested, to ensure that all pieces had the correct value and that this added the correct amount to the scores.
+
+- The win condition was tested to ensure the game could be won if players get the right amount of points by capturing all opposing player's pieces.
+
+#### Bugs Found
+- A player can technically not be able to move, if they only have pawns left and all are on the end of the opposing player's side. This has been fixed by adding the 'Reset Game' button, allowing players to reset the game and avoid them getting stuck.
+
